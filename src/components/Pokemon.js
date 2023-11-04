@@ -1,12 +1,10 @@
 import React from 'react'
-// import "../Components"
+import "./Pokemon.css"
 
 const Pokemon = (props) => {
     return(
         <div className="pokemon">
-            <div className="pokemon-image">
-                image
-            </div>
+            <img className="image" src={props.image} />
             <h2>{props.name}</h2>
             <h3>Cuteness: {props.cuteness}</h3>
         </div>

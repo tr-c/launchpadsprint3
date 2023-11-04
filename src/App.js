@@ -3,22 +3,27 @@ import './App.css';
 
 import Pokemon from "./components/Pokemon"
 
-import OshawattImg from "./image/oshw.png"
+import OshawattImg from "./image/better oshawott.png"
+import PikachuImg from "./image/better pikachu.png"
 
 function App(){
   const pokedex = [{
-    "image": OshawattImg,
     "name": "Pikachu",
-    "cuteness": "8"
+    "cuteness": "8",
+    "image": PikachuImg
   },
     {
       "name": "Oshawott",
-      "cuteness": "9"
-    }]
+      "cuteness": "9",
+      "image": OshawattImg
+    },]
   return (
     <div className="App">
       {}
       {/* header */}
+
+      
+
       <div className="header"> 
         <h1>Pokemon</h1>
 
@@ -26,7 +31,7 @@ function App(){
       {/* body */}
       <div className="body">
         {pokedex.map(poke => 
-          <Pokemon name={poke.name} cuteness={poke.cuteness} />
+          <Pokemon name={poke.name} cuteness={poke.cuteness} image={poke.image} />
         )
         // <h4>Pokemon</h4>
         }
